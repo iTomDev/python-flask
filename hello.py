@@ -1,7 +1,6 @@
-from flask import Flask
+import numpy as np
+import scipy as sp
 
-app = Flask(__name__)
-
-@app.route("/")
 def hello():
     return "Hello World!"
+    
