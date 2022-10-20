@@ -5,8 +5,10 @@ import matplotlib.pyplot as plt
 
 def hello():
     return "Hello World!"
-    
-def spatial_demo():
+def simpleSum(a, b):
+    return a+b
+
+def spatialDemo():
     points = np.array([
         [2,4],
         [3,4],
