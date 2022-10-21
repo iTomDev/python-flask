@@ -4,7 +4,7 @@
 #     assert response.data == b'Hello World!'
 #     assert response.status_code == 200
 
-import hello.py    
+import hello  
 
 def test_sum(self):
     assert self.simpleSum(1,2) == 3
