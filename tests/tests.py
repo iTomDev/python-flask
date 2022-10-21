@@ -5,7 +5,7 @@
 #     assert response.status_code == 200
 
 import pytest
-import hello.py  
+import python-flask/hello  
 
 def test_sum(self):
     assert self.simpleSum(1,2) == 4
