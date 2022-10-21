@@ -4,6 +4,7 @@
 #     assert response.data == b'Hello World!'
 #     assert response.status_code == 200
 
+import pytest
 import hello  
 
 def test_sum(self):

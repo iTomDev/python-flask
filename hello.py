@@ -41,6 +41,6 @@ def sqlDemoReadback():
     conn = sqlite3.connect('test.db')
     cursor = conn.execute("SELECT id, name, address, salary from COMPANY")
     for row in cursor:
-        return[0] # ID
+        return row[0] # ID
     conn.close()
     
