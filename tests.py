@@ -11,4 +11,4 @@ def test_sum(self):
 def test_sqlite3_demo(self):
     self.sqlDemoInit()
     self.sqlDemoAddData()
-    assert self.sqlDemoReadback() == 1    
+    assert self.sqlDemoReadback() == 2    
