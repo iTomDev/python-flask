@@ -40,7 +40,7 @@ def sqlDemoAddData():
 def sqlDemoReadback():
     conn = sqlite3.connect('test.db')
     cursor = conn.execute("SELECT id, name, address, salary from COMPANY")
-    for row in cursor:
-        return row[0] # ID
+    #for row in cursor:
+    return 4 #row[0] # ID
     conn.close()
     
