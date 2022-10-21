@@ -3,12 +3,15 @@
 #     response = c.get('/')
 #     assert response.data == b'Hello World!'
 #     assert response.status_code == 200
-    
+
+import hello.py    
+
 def test_sum(self):
     assert self.simpleSum(1,2) == 3
     #assert sum([1,2,3]) == 6, "should be 6"
 
 def test_sqlite3_demo(self):
-    self.sqlDemoInit()
-    self.sqlDemoAddData()
-    assert self.sqlDemoReadback() == 2    
+    hello.sqlDemoInit()
+    hello.sqlDemoAddData()
+    result = hello.sqlDemoReadback()
+    assert result == 6, "equal"
