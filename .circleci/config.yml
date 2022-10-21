@@ -19,6 +19,7 @@ jobs:
       - run:
           name: Running tests
           command: |
+              pytest
             . venv/bin/activate
             python3 tests.py
       - store_artifacts:
