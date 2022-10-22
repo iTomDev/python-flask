@@ -1,13 +1,15 @@
-import numpy as np
-import scipy as sp
+#import numpy as np
+#import scipy as sp
 # from scipy.spatial import Delaunay
 # import matplotlib.pyplot as plt
 import sqlite3
+import os
 
 def hello():
     return "Hello World!"
+
 def simpleSum(a, b):
-    return a+b
+    return (a+b)
 
 # def spatialDemo():
 #     points = np.array([
@@ -22,6 +24,7 @@ def simpleSum(a, b):
 #     plt.show()
     
 def sqlDemoInit():
+    os.remove('test.db')
     conn = sqlite3.connect("test.db")
     conn.execute('''CREATE TABLE COMPANY
          (ID INT PRIMARY KEY     NOT NULL,
@@ -33,14 +36,14 @@ def sqlDemoInit():
     
 def sqlDemoAddData():
     conn = sqlite3.connect('test.db')
-    conn.execute("INSERT INTO COMPANY (ID,NAME,AGE,ADDRESS,SALARY) \ VALUES (1, 'Paul', 32, 'California', 20000.00 )");
+    conn.execute("INSERT INTO COMPANY (ID,NAME,AGE,ADDRESS,SALARY) VALUES (55, 'Paul', 32, 'California', 20000.00 )");
     conn.commit()
     conn.close()
     
 def sqlDemoReadback():
     conn = sqlite3.connect('test.db')
     cursor = conn.execute("SELECT id, name, address, salary from COMPANY")
-    #for row in cursor:
-    return 4 #row[0] # ID
+    for row in cursor:
+        return row[0] # ID
     conn.close()
     
