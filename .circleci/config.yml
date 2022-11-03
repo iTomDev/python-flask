@@ -19,9 +19,8 @@ jobs:
       - run:
           name: Running tests
           command: |
-            pytest
-            #. venv/bin/activate
-            #python3 tests/test_ing.py
+            . venv/bin/activate
+            python3 tests/test_ing.py
       - store_artifacts:
           path: test-reports/
           destination: python_app

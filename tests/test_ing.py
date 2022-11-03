@@ -7,7 +7,7 @@
 import pytest
 #tgt = __import__("hello.py")
 #import hello.py
-import hello
+import src.hello as hello
 
 def test_sum():
     assert hello.simpleSum(1,2) == 3
